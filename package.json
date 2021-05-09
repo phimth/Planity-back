@@ -8,5 +8,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash.merge": "^4.6.2"
+  }
 }

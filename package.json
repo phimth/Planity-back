@@ -1,0 +1,12 @@
+{
+  "name": "Back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/phimth/Planity-back.git",
+  "author": "phimth <tphiman@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}

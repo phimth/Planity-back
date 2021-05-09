@@ -9,6 +9,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "lodash.merge": "^4.6.2"
+    "axios": "^0.21.1"
   }
 }

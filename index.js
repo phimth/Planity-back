@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const dir = path.join(__dirname, 'backup');
-var merge = require('lodash.merge');
+const axios = require('axios')
 
 let usersUrl = "https://recrutement-practice-default-rtdb.firebaseio.com/users.json";
 let infosUrl = "https://recrutement-practice-default-rtdb.firebaseio.com/informations.json";
@@ -120,3 +120,15 @@ let users = require(path.join(dir, "users.json"));
 let jobs = require(path.join(dir, "jobs.json"));
 let finalContent = sanitize(users,infos)
 finalContent = sanitize(finalContent,jobs)
+
+axios
+  .post('https://jsonbox.io/box_f3942e369bc1946b1c10', {
+    finalContent
+  })
+  .then(res => {
+    console.log(`statusCode: ${res.statusCode}`)
+    console.log(res)
+  })
+  .catch(error => {
+    console.error(error)
+  })
